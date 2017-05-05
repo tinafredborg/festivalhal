@@ -7,6 +7,8 @@ import {
   ToastController, NavController
 } from "ionic-angular";
 
+//Test@Test.Test... Hva' virker det?
+
 import { RecipesService } from "../../services/recipes";
 import { Recipe } from "../../models/recipe";
 
