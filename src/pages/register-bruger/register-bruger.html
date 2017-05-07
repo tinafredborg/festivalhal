@@ -1,18 +1,30 @@
-<!--
-  Generated template for the RegisterBruger page.
 
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
 
   <ion-navbar>
-    <ion-title>register-bruger</ion-title>
+    <ion-title>ny bruger</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-
+  <h2>Opret bruger</h2>
+  <form #f="ngForm" (ngSubmit)="onSignup(f)">
+    <ion-list>
+      <ion-item>
+        <ion-label fixed>brugernavn</ion-label>
+        <ion-input ngModel type="text" required>brugernavn</ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label fixed>email</ion-label>
+        <ion-input ngModel type="email" required>email</ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label fixed>password</ion-label>
+        <ion-input ngModel type="password" required [minlength]="8">adgangskode</ion-input>//har sat min length på kode//
+      </ion-item>
+    </ion-list>
+    <button ion-button block outline type="submit" [disabled]="!f.valid">sigup</button>
+  </form>
 </ion-content>

@@ -1,12 +1,31 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>
-     <h1> Festivalhal </h1>
-    </ion-title>
+    <ion-buttons end>
+    <button ion-button icon-only menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    </ion-buttons>
+    <ion-title class="title"><h1>Festivalhal</h1></ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h2>App'en</h2>
-
+<ion-content class="background" padding>
+  <h3 class="subtitle" text-center>App'en</h3>
+  <form #f="ngForm" (ngSubmit)="onlogin(f)">
+    <ion-list>
+      <ion-item>
+        <ion-label fixed>brugernavn</ion-label>
+        <ion-input ngModel type="text" required>brugernavn</ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label fixed>password</ion-label>
+        <ion-input ngModel type="password" required [minlength]="8">adgangskode</ion-input>
+      </ion-item>
+    </ion-list>
+    <button ion-button block type="submit" [disabled]="!f.valid">log ind</button>
+    <button ion-button block outline (click)="onOpret()">opret bruger</button>
+  </form>
 </ion-content>
+
+
+

@@ -1,4 +1,19 @@
-page-home {
-font-family: "Palatino Linotype";
 
+
+
+page-home {
+.subtitle{font-family: 'PT Sans', sans-serif;
+
+}
+  .title{ margin-left: 103px;
+    font-family: 'PT Sans', sans-serif;
+    font-size: larger;
+}
+<!--
+  .background{
+    background-image: url('images/planker[1812].jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  -->
 }

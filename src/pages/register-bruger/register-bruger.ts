@@ -1,17 +1,13 @@
 import { Component } from '@angular/core';
-import {  NavController, NavParams } from 'ionic-angular';
-
+import { NgForm } from'@angular/forms';
 @Component({
   selector: 'page-register-bruger',
   templateUrl: 'register-bruger.html',
 })
 export class RegisterBrugerPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad RegisterBruger');
+  onSignup(form: NgForm){
+    console.log(form.value);
   }
 
 }
