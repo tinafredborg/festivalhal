@@ -6,11 +6,11 @@
   </ion-header>
   <ion-content>
     <ion-list>
-      <button ion-item icon-left (click)="onLoad(reglerPage)"><ion-icon name="list-box"></ion-icon>spillets regler</button>
-      <button ion-item icon-left (click)="onLoad(programPage)"><ion-icon name="book"></ion-icon>Festival program</button>
-      <button ion-item icon-left (click)="onLoad(registerbrugerPage)"><ion-icon name="person"></ion-icon>register dig</button>
-      <button ion-item icon-left (click)="onLoad(spilPage)"><ion-icon name="game-controller-a"></ion-icon>start spillet</button>
-      <button ion-item icon-left (click)="onLogOut()"><ion-icon name="log-out"></ion-icon>log out</button>
+      <button ion-item icon-left (click)="onLoad(reglerPage)" *ngIf="isAuthenticated"><ion-icon name="list-box"></ion-icon>spillets regler</button>
+      <button ion-item icon-left (click)="onLoad(programPage)" *ngIf="isAuthenticated"><ion-icon name="book"></ion-icon>Festival program</button>
+      <button ion-item icon-left (click)="onLoad(menuPage)" *ngIf="isAuthenticated"><ion-icon name="person"></ion-icon>menu</button>
+      <button ion-item icon-left (click)="onLoad(spilPage)" *ngIf="isAuthenticated"><ion-icon name="game-controller-a"></ion-icon>start spillet</button>
+      <button ion-item icon-left (click)="onLogout()"><ion-icon name="log-out"></ion-icon>log out</button>
     </ion-list>
   </ion-content>
 </ion-menu>

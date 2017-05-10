@@ -9,23 +9,27 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content class="background" padding>
+<ion-content padding class="background">
   <h3 class="subtitle" text-center>App'en</h3>
   <form #f="ngForm" (ngSubmit)="onlogin(f)">
     <ion-list>
       <ion-item>
-        <ion-label fixed>brugernavn</ion-label>
-        <ion-input ngModel type="text" required>brugernavn</ion-input>
+        <ion-label fixed>email</ion-label>
+        <ion-input  type="mail" ngModel name="email" required></ion-input>
       </ion-item>
       <ion-item>
-        <ion-label fixed>password</ion-label>
-        <ion-input ngModel type="password" required [minlength]="8">adgangskode</ion-input>
+        <ion-label fixed>adgangskode</ion-label>
+        <ion-input  type="password" ngModel name="password" required >adgangskode</ion-input>
       </ion-item>
     </ion-list>
-    <button ion-button block type="submit" [disabled]="!f.valid">log ind</button>
-    <button ion-button block outline (click)="onOpret()">opret bruger</button>
-  </form>
+      <button ion-button block type="submit" [disabled]="!f.valid">log ind</button>
+    </form>
+      <button ion-button block outline (click)="onOpret()">opret bruger</button>
+  <button ion-button block  (click)="onSigninFace()"><ion-icon name="globe"></ion-icon> signin with facebook</button>
+  <button ion-button clear (click)="onForgotPass()">forgot password</button>
 </ion-content>
+
+
 
 
 

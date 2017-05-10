@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { NavController } from 'ionic-angular';
-import { LoginPage } from "./log-in/log-in";
+import { NavController, AlertController, LoadingController } from 'ionic-angular';
+import { AuthService } from "../../services/auth";
+import { RegisterBrugerPage } from "../register-bruger/register-bruger";
+import { MenuPage } from "./menu/menu";
 
 @Component({
   selector: 'page-home',
@@ -9,13 +11,31 @@ import { LoginPage } from "./log-in/log-in";
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, private authService: AuthService,
+              private loadingCtrl: LoadingController, private alertCtrl: AlertController) {
   }
   onlogin(form: NgForm){
-    console.log (form.value);
+    const loading = this.loadingCtrl.create({
+      content: 'du logges ind...'
+    });
+    loading.present();
+    this.authService.login(form.value.brugernavn, form.value.email, form.value.password)
+      .then(data => {
+        loading.dismiss();
+      })
+      .catch(error => {
+        loading.dismiss();
+        const alert = this.alertCtrl.create({
+          title: 'log ind mislykket',
+          message: error.message,
+          buttons: ['ok!']
+        });
+        alert.present();
+      });
+
   }
   onOpret(){
-    this.navCtrl.push(LoginPage);
+    this.navCtrl.push(RegisterBrugerPage);
   }
 
 }

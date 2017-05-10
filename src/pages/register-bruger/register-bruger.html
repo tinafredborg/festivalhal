@@ -8,23 +8,24 @@
 </ion-header>
 
 
-<ion-content padding>
-  <h2>Opret bruger</h2>
-  <form #f="ngForm" (ngSubmit)="onSignup(f)">
+<ion-content padding class="background">
+
+  <form #f="ngForm" (ngSubmit)="onOpret(f)">
     <ion-list>
       <ion-item>
         <ion-label fixed>brugernavn</ion-label>
-        <ion-input ngModel type="text" required>brugernavn</ion-input>
+        <ion-input  type="text" ngModel name="brugernavn" required></ion-input>
       </ion-item>
       <ion-item>
         <ion-label fixed>email</ion-label>
-        <ion-input ngModel type="email" required>email</ion-input>
+        <ion-input  type="mail" ngModel name="email" required></ion-input>
       </ion-item>
       <ion-item>
-        <ion-label fixed>password</ion-label>
-        <ion-input ngModel type="password" required [minlength]="8">adgangskode</ion-input>//har sat min length på kode//
-      </ion-item>
+        <ion-label fixed>adgangskode</ion-label>
+        <ion-input  type="password" ngModel name="password" required [minlength]="6"></ion-input>
+        </ion-item>
+      <ion-note item-left>adgangskode min 6 karakter</ion-note>
     </ion-list>
-    <button ion-button block outline type="submit" [disabled]="!f.valid">sigup</button>
+        <button ion-button block outline type="submit" [disabled]="!f.valid">opret bruger</button>
   </form>
 </ion-content>
