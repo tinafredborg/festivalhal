@@ -3,7 +3,7 @@ import { NgForm } from '@angular/forms';
 import { NavController, AlertController, LoadingController } from 'ionic-angular';
 import { AuthService } from "../../services/auth";
 import { RegisterBrugerPage } from "../register-bruger/register-bruger";
-import { MenuPage } from "./menu/menu";
+
 
 @Component({
   selector: 'page-home',
@@ -12,14 +12,14 @@ import { MenuPage } from "./menu/menu";
 export class HomePage {
 
   constructor(public navCtrl: NavController, private authService: AuthService,
-              private loadingCtrl: LoadingController, private alertCtrl: AlertController) {
+              private loadingCtrl: LoadingController, private alertCtrl: AlertController,) {
   }
   onlogin(form: NgForm){
     const loading = this.loadingCtrl.create({
       content: 'du logges ind...'
     });
     loading.present();
-    this.authService.login(form.value.brugernavn, form.value.email, form.value.password)
+    this.authService.login( form.value.email, form.value.password)
       .then(data => {
         loading.dismiss();
       })
@@ -39,3 +39,4 @@ export class HomePage {
   }
 
 }
+

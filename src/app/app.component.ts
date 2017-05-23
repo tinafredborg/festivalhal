@@ -3,7 +3,6 @@ import { Platform, NavController, MenuController } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { HomePage } from '../pages/home/home';
-import { LogOutPage } from '../pages/log-out/log-out';
 import { ProgramPage } from '../pages/program/program';
 import { MenuPage } from '../pages/menu/menu';
 import { ReglerPage } from '../pages/regler/regler';
@@ -16,7 +15,7 @@ import firebase from 'firebase';
 })
 export class MyApp {
   rootPage:any = HomePage;
-  logoutPage = LogOutPage;
+
   programPage = ProgramPage;
   menuPage = MenuPage;
   reglerPage = ReglerPage;

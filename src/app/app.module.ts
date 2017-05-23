@@ -10,7 +10,7 @@ import { ProgramPage } from '../pages/program/program';
 import { RegisterBrugerPage } from '../pages/register-bruger/register-bruger';
 import { ReglerPage } from '../pages/regler/regler';
 import { SpilPage } from '../pages/spil/spil';
-import { LogOutPage } from '../pages/log-out/log-out';
+
 import { AuthService } from '../services/auth';
 
 @NgModule({
@@ -22,7 +22,7 @@ import { AuthService } from '../services/auth';
     RegisterBrugerPage,
     ReglerPage,
     SpilPage,
-    LogOutPage
+
   ],
   imports: [
     BrowserModule,
@@ -37,7 +37,7 @@ import { AuthService } from '../services/auth';
     RegisterBrugerPage,
     ReglerPage,
     SpilPage,
-    LogOutPage
+
   ],
   providers: [
     StatusBar,

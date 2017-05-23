@@ -1,32 +1,24 @@
-<ion-header>
-  <ion-navbar>
-    <ion-buttons end>
-    <button ion-button icon-only menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    </ion-buttons>
-    <ion-title class="title"><h1>Festivalhal</h1></ion-title>
-  </ion-navbar>
-</ion-header>
 
-<ion-content padding class="background">
-  <h3 class="subtitle" text-center>App'en</h3>
-  <form #f="ngForm" (ngSubmit)="onlogin(f)">
+
+<ion-content  class="background">
+
+  <form class="form" #f="ngForm" (ngSubmit)="onlogin(f)" style="margin-top: 300px; width: 250px;">
     <ion-list>
       <ion-item>
-        <ion-label fixed>email</ion-label>
-        <ion-input  type="mail" ngModel name="email" required></ion-input>
+        <ion-label text-center>e-mail</ion-label>
+        <ion-input class="felt" type="mail" ngModel name="email" required></ion-input>
       </ion-item>
+      <hr>
       <ion-item>
-        <ion-label fixed>adgangskode</ion-label>
-        <ion-input  type="password" ngModel name="password" required >adgangskode</ion-input>
+        <ion-label>adgangskode</ion-label>
+        <ion-input class="felt" text-center type="password" ngModel name="password" required >adgangskode</ion-input>
       </ion-item>
+      <hr>
     </ion-list>
-      <button ion-button block type="submit" [disabled]="!f.valid">log ind</button>
-    </form>
-      <button ion-button block outline (click)="onOpret()">opret bruger</button>
-  <button ion-button block  (click)="onSigninFace()"><ion-icon name="globe"></ion-icon> signin with facebook</button>
-  <button ion-button clear (click)="onForgotPass()">forgot password</button>
+      <button class="login" ion-button type="submit" color="dark" style="width: 250px; height: 55px;" >log ind</button>
+      </form>
+  <button class="user" ion-button outline color="light" style="width: 250px; height: 55px; margin-left: 83px;" (click)="onOpret()">ny bruger</button>
+  <ion-note >www.festivalhal.dk</ion-note>
 </ion-content>
 
 
