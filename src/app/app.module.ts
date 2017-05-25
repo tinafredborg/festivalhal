@@ -10,7 +10,6 @@ import { RegisterBrugerPage } from '../pages/register-bruger/register-bruger';
 
 import { AuthService } from '../services/auth';
 
-/*Holy shit, ohMahGawd!*/
 
 @NgModule({
   declarations: [

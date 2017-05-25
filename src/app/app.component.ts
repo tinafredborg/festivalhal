@@ -13,9 +13,7 @@ import firebase from 'firebase';
 })
 export class MyApp {
   rootPage:any = HomePage;
-
   programPage = ProgramPage;
-
   isAuthenticated = false;
 
   @ViewChild('nav') nav: NavController;
