@@ -1,24 +1,37 @@
 
 
-<ion-content  class="background">
+<ion-content  style="background-image:url('assets/baggrund.png');
+              background-repeat: no-repeat;
+              background-size: cover;" padding>
 
-  <form class="form" #f="ngForm" (ngSubmit)="onlogin(f)" style="margin-top: 300px; width: 250px;">
-    <ion-list>
-      <ion-item>
-        <ion-label text-center>e-mail</ion-label>
-        <ion-input class="felt" type="mail" ngModel name="email" required></ion-input>
-      </ion-item>
-      <hr>
-      <ion-item>
-        <ion-label>adgangskode</ion-label>
-        <ion-input class="felt" text-center type="password" ngModel name="password" required >adgangskode</ion-input>
-      </ion-item>
-      <hr>
-    </ion-list>
-      <button class="login" ion-button type="submit" color="dark" style="width: 250px; height: 55px;" >log ind</button>
-      </form>
-  <button class="user" ion-button outline color="light" style="width: 250px; height: 55px; margin-left: 83px;" (click)="onOpret()">ny bruger</button>
-  <ion-note >www.festivalhal.dk</ion-note>
+<ion-grid style="margin-top:60%; padding:15%;">
+  <ion-row>
+    <ion-col>
+      <form #f="ngForm" (ngSubmit)="onlogin(f)">
+         <ion-col>
+            <ion-item>
+              <ion-label text-center>E-mail</ion-label>
+              <ion-input type="mail" ngModel name="email" required></ion-input>
+              </ion-item>
+          </ion-col>
+           <ion-col>
+              <ion-item>
+               <ion-label>Adgangskode</ion-label>
+               <ion-input text-center type="password" ngModel name="password" required >adgangskode</ion-input>
+              </ion-item>
+            </ion-col>
+       <ion-col>
+         <button class="login" ion-button type="submit" style="width: 100%; height: 55px; margin-left:-2%;"icon-left ><ion-icon name="log-in" color="light"></ion-icon>Log ind</button>
+       </ion-col>
+ </form>
+      </ion-col>
+           <ion-col col-12>
+          <button class="user" ion-button style="width: 100%; height: 55px;" (click)="onOpret()">Ny bruger</button>
+          </ion-col>
+
+  </ion-row>
+  </ion-grid>
+            <p class="footer" >www.festivalhal.dk</p>
 </ion-content>
 
 

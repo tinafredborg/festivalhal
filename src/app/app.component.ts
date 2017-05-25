@@ -4,9 +4,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { HomePage } from '../pages/home/home';
 import { ProgramPage } from '../pages/program/program';
-import { MenuPage } from '../pages/menu/menu';
-import { ReglerPage } from '../pages/regler/regler';
-import { SpilPage } from '../pages/spil/spil';
+
 import { AuthService } from '../services/auth';
 import firebase from 'firebase';
 
@@ -17,9 +15,7 @@ export class MyApp {
   rootPage:any = HomePage;
 
   programPage = ProgramPage;
-  menuPage = MenuPage;
-  reglerPage = ReglerPage;
-  spilPage = SpilPage;
+
   isAuthenticated = false;
 
   @ViewChild('nav') nav: NavController;
