@@ -13,6 +13,8 @@ import { SpilPage } from '../pages/spil/spil';
 
 import { AuthService } from '../services/auth';
 
+/*Holy shit, ohMahGawd!*/
+
 @NgModule({
   declarations: [
     MyApp,
