@@ -5,8 +5,11 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import { MenuPage } from '../pages/menu/menu';
 import { ProgramPage } from '../pages/program/program';
 import { RegisterBrugerPage } from '../pages/register-bruger/register-bruger';
+import { ReglerPage } from '../pages/regler/regler';
+import { SpilPage } from '../pages/spil/spil';
 
 import { AuthService } from '../services/auth';
 
@@ -16,8 +19,11 @@ import { AuthService } from '../services/auth';
   declarations: [
     MyApp,
     HomePage,
+    MenuPage,
     ProgramPage,
-    RegisterBrugerPage
+    RegisterBrugerPage,
+    ReglerPage,
+    SpilPage,
 
   ],
   imports: [
@@ -28,8 +34,11 @@ import { AuthService } from '../services/auth';
   entryComponents: [
     MyApp,
     HomePage,
+    MenuPage,
     ProgramPage,
-    RegisterBrugerPage
+    RegisterBrugerPage,
+    ReglerPage,
+    SpilPage,
 
   ],
   providers: [

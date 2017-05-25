@@ -1,14 +1,16 @@
-<ion-menu [content]="nav" >
+<ion-menu [content]="nav">
   <ion-header>
-    <ion-navbar color="dark">
     <ion-toolbar>
       <ion-title>menu</ion-title>
     </ion-toolbar>
-      </ion-navbar>
   </ion-header>
   <ion-content>
-    <ion-list color="light">
-      <button ion-item icon-left color="light" (click)="onLogout()"><ion-icon name="log-out" color="light"></ion-icon>log out</button>
+    <ion-list>
+      <button ion-item icon-left (click)="onLoad(reglerPage)" *ngIf="isAuthenticated"><ion-icon name="list-box"></ion-icon>spillets regler</button>
+      <button ion-item icon-left (click)="onLoad(programPage)" *ngIf="isAuthenticated"><ion-icon name="book"></ion-icon>Festival program</button>
+      <button ion-item icon-left (click)="onLoad(menuPage)" *ngIf="isAuthenticated"><ion-icon name="person"></ion-icon>menu</button>
+      <button ion-item icon-left (click)="onLoad(spilPage)" *ngIf="isAuthenticated"><ion-icon name="game-controller-a"></ion-icon>start spillet</button>
+      <button ion-item icon-left (click)="onLogout()"><ion-icon name="log-out"></ion-icon>log out</button>
     </ion-list>
   </ion-content>
 </ion-menu>

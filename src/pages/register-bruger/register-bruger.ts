@@ -42,5 +42,6 @@ export class RegisterBrugerPage {
           alert.present();
         });
     }
-   }
+
+    }
 }

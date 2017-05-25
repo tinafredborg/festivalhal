@@ -1,20 +1,38 @@
 
-page-home {
 
+
+page-home {
+.subtitle{font-family: 'PT Sans', sans-serif;
+
+}
+  .title{ margin-left: 1px;
+    font-family: 'PT Sans', sans-serif;
+    font-size: larger;
+}
+  .background{
+
+    background: url("../../assets/baggrund.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 
   .login { background-color: #000000;
            color: #ffffff;
+           margin-left: 1px;
   }
   .user{border: 1px solid;
     color: #ffffff;
-    background-color: transparent;
     border-color: #ffffff;
+    margin-top: -200px !important;
 
 
   }
+  .form{width: 250%;
+        height: 50%;
+        margin-left: 80px;
 
-  .footer{color: #fff;
-          margin-top: -5%;
-          text-align: center !important;
+  }
+  ion-note{  margin-left: 150px;
+             margin-bottom: 0px;
   }
 }
