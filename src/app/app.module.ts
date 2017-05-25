@@ -9,6 +9,7 @@ import { ProgramPage } from '../pages/program/program';
 import { RegisterBrugerPage } from '../pages/register-bruger/register-bruger';
 
 import { AuthService } from '../services/auth';
+import { Vibration } from '@ionic-native/vibration';
 
 import { Push } from '@ionic-native/push';
 
@@ -38,6 +39,7 @@ import { Push } from '@ionic-native/push';
     SplashScreen,
     AuthService,
     Push,
+    Vibration,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

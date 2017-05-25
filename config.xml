@@ -12,7 +12,7 @@
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
-    <preference name="loadUrlTimeoutValue" value="60000" />   <!-- To fix connection error -->
+    <preference name="loadUrlTimeoutValue" value="60000" />
     <preference name="webviewbounce" value="false" />
     <preference name="UIWebViewBounce" value="false" />
     <preference name="DisallowOverscroll" value="true" />
@@ -88,4 +88,5 @@
     <plugin name="phonegap-plugin-push" spec="^1.10.4">
         <variable name="SENDER_ID" value="66471985496" />
     </plugin>
+    <plugin name="cordova-plugin-vibration" spec="^2.1.5" />
 </widget>

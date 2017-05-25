@@ -4,6 +4,8 @@ import { NavController, AlertController, LoadingController } from 'ionic-angular
 import { AuthService } from "../../services/auth";
 import { RegisterBrugerPage } from "../register-bruger/register-bruger";
 
+import { Vibration } from '@ionic-native/vibration';
+
 
 @Component({
   selector: 'page-home',
@@ -12,8 +14,14 @@ import { RegisterBrugerPage } from "../register-bruger/register-bruger";
 export class HomePage {
 
   constructor(public navCtrl: NavController, private authService: AuthService,
-              private loadingCtrl: LoadingController, private alertCtrl: AlertController,) {
+              private loadingCtrl: LoadingController, private alertCtrl: AlertController,  private vibration: Vibration) {
   }
+
+  vibrate(){
+    console.log("vibrate!");
+    this.vibration.vibrate([500]);
+  }
+
   onlogin(form: NgForm){
     const loading = this.loadingCtrl.create({
       content: 'du logges ind...'
