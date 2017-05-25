@@ -1,26 +1,7 @@
 page-register-bruger {
-  .background {
-    background: url("../../assets/baggrund.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  .bruger {
-    border: 1px solid;
-    color: #ffffff;
-    border-color: #ffffff;
-    margin-left: 0px;
-  }
 
-  .login { background-color: #000000;
-    color: #ffffff;
-    margin-left: 1px;
-  }
-
-  .form{
-
-
-  }
-  ion-note.web{  margin-left: 140px;
-    margin-bottom: 60px;
+    .footer{color: #fff;
+    margin-top: -5%;
+    text-align: center !important;
   }
 }

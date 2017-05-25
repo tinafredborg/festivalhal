@@ -1,27 +1,46 @@
 
-
-<ion-content padding class="background">
-
-  <form #f="ngForm" (ngSubmit)="onOpret(f)" style="margin-top: 300px; width: 250px;  margin-left: 70px;">
-    <ion-list>
+<ion-content style="background-image:url('assets/baggrund.png');
+             background-repeat: no-repeat;
+             background-size: cover;" padding>
+  <ion-grid style="margin-top:60%; padding:15%;">
+    <ion-row>
+      <ion-col>
+  <form #f="ngForm" (ngSubmit)="onOpret(f)">
+    <ion-col>
       <ion-item>
         <ion-label fixed>email</ion-label>
         <ion-input  type="mail" ngModel name="email" required></ion-input>
       </ion-item>
-      <hr>
+    </ion-col>
+    <ion-col>
       <ion-item>
         <ion-label fixed>adgangskode</ion-label>
         <ion-input  type="password" ngModel name="password" required [minlength]="6"></ion-input>
         </ion-item>
-      <hr>
+      </ion-col>
+    <ion-col>
       <ion-item>
         <ion-label fixed>gentag adgangskode</ion-label>
         <ion-input  type="password" ngModel name="confirmPassword" required [minlength]="6"></ion-input>
       </ion-item>
+    </ion-col>
+    <ion-col>
       <ion-note>adgangskode min 6 tegn</ion-note>
-    </ion-list>
-    <button class="bruger" ion-button block outline type="submit" color="light">opret bruger</button>
+    </ion-col>
+    <ion-col >
+    <button class="bruger" ion-button block outline type="submit" color="light" style="width: 100%; height: 55px; margin-left:-2%;">opret bruger</button>
+     </ion-col>
   </form>
-  <hr>
-  <ion-note class="web"> www.festivalhal.dk</ion-note>
+      </ion-col>
+    </ion-row>
+</ion-grid>
+  <p class="footer">www.festivalhal.dk</p>
 </ion-content>
+
+
+
+
+
+
+
+

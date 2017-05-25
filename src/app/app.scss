@@ -16,16 +16,16 @@
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
 
-$input-height: 50px;
-$input-width: 250px;
-.ion-input{width: $input-width;
-  height: $input-height;
+
+.menu-inner > ion-header, .menu-inner > ion-content, .menu-inner > ion-footer{
+  background-color: #000000 !important;
 
 }
+.list-ios > .item-block:last-child .item-inner, .list-ios > .item-wrapper:last-child .item-block .item-inner{
+  background-color: #000000 !important;
 
-
-
-.felt {width: $input-width;
-  height: $input-height;
-
+  .list-ios > .item-block:last-child, .list-ios > .item-wrapper:last-child .item-block {
+    border-bottom: 0.55px solid black!important;
+    background-color: black;
+  }
 }

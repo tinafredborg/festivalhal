@@ -37,6 +37,5 @@ export class HomePage {
   onOpret(){
     this.navCtrl.push(RegisterBrugerPage);
   }
-
 }
 
